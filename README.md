@@ -29,7 +29,7 @@ The program uses **OOP principles** such as **abstract classes, interfaces, and 
 |------------------------|--------|-----------------|--------------------------------|
 | `Circle`              | 2D     | `Shape`         | `calculateArea()`, `calculatePerimeter()` |
 | `Rectangle`           | 2D     | `Shape`         | `calculateArea()`, `calculatePerimeter()` |
-| `Square`              | 2D     | `Rectangle`     | Uses rectangle methods         |
+| `Square`              | 2D     | `Rectangle`     | Uses rectangle methods with equal sides        |
 | `Sphere`              | 3D     | `Shape, Volume` | `calculateArea()`, `calculateVolume()` |
 | `Cylinder`            | 3D     | `Shape, Volume` | `calculateArea()`, `calculateVolume()` |
 | `EquilateralPyramid`  | 3D     | `Shape, Volume` | `calculateArea()`, `calculateVolume()` |
