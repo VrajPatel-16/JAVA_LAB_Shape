@@ -15,8 +15,8 @@ abstract class Shape {
 
     // Display shape details
     public void display() {
-        System.out.println("\nShape: " + shapeName);
-        System.out.println("Area: " + calculateArea());
-        System.out.println("Perimeter: " + calculatePerimeter());
+        System.out.println("\nShape:- " + shapeName);
+        System.out.println("Area:- " + calculateArea());
+        System.out.println("Perimeter:- " + calculatePerimeter());
     }
 }
