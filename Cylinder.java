@@ -10,3 +10,22 @@ class Cylinder extends Shape implements Volume {
         this.radius = radius;
         this.height = height;
     }
+
+    // Implement area calculation (Surface Area)
+    @Override
+    double calculateArea() {
+        return 2 * Math.PI * radius * (radius + height);
+    }
+
+    // Cylinder does not have a perimeter
+    @Override
+    double calculatePerimeter() {
+        return 0;
+    }
+
+    // Implement volume calculation
+    @Override
+    public double calculateVolume() {
+        return Math.PI * radius * radius * height;
+    }
+}
