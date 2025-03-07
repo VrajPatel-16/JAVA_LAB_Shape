@@ -1,3 +1,5 @@
+//Main.java
+
 // Import Scanner for user input
 import java.util.Scanner;
 
@@ -21,3 +23,70 @@ public class Main {
             choice = scanner.nextInt();
 
             Shape shape = null;  // Declare shape variable
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter radius of the circle: ");
+                    double radius = scanner.nextDouble();
+                    shape = new Circle(radius);
+                    break;
+
+                case 2:
+                    System.out.print("Enter length of the rectangle: ");
+                    double length = scanner.nextDouble();
+                    System.out.print("Enter width of the rectangle: ");
+                    double width = scanner.nextDouble();
+                    shape = new Rectangle(length, width);
+                    break;
+
+                case 3:
+                    System.out.print("Enter side length of the square: ");
+                    double side = scanner.nextDouble();
+                    shape = new Square(side);
+                    break;
+
+                case 4:
+                    System.out.print("Enter radius of the sphere: ");
+                    double sphereRadius = scanner.nextDouble();
+                    Sphere sphere = new Sphere(sphereRadius);
+                    sphere.display();
+                    System.out.println("Volume: " + sphere.calculateVolume());
+                    continue;
+
+                case 5:
+                    System.out.print("Enter radius of the cylinder: ");
+                    double cylRadius = scanner.nextDouble();
+                    System.out.print("Enter height of the cylinder: ");
+                    double cylHeight = scanner.nextDouble();
+                    Cylinder cylinder = new Cylinder(cylRadius, cylHeight);
+                    cylinder.display();
+                    System.out.println("Volume: " + cylinder.calculateVolume());
+                    continue;
+
+                case 6:
+                    System.out.print("Enter base length of the pyramid: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Enter height of the pyramid: ");
+                    double height = scanner.nextDouble();
+                    EquilateralPyramid pyramid = new EquilateralPyramid(base, height);
+                    pyramid.display();
+                    System.out.println("Volume: " + pyramid.calculateVolume());
+                    continue;
+
+                case 0:
+                    System.out.println("Exiting program...");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice! Try again.");
+            }
+
+            if (shape != null) {
+                shape.display();
+            }
+
+        } while (choice != 0);
+
+        scanner.close();
+    }
+}
