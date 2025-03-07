@@ -12,3 +12,11 @@ abstract class Shape {
     // Abstract methods to be implemented by subclasses
     abstract double calculateArea();
     abstract double calculatePerimeter();
+
+    // Display shape details
+    public void display() {
+        System.out.println("\nShape: " + shapeName);
+        System.out.println("Area: " + calculateArea());
+        System.out.println("Perimeter: " + calculatePerimeter());
+    }
+}
